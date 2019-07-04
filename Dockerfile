@@ -1,14 +1,15 @@
 #
 # Dockerfile
 #
-# Author: Matteo Cerutti <matteo.cerutti@hotmail.co.uk>
+# Author: Andrew Beresford <andrew@aviancarrier.co.uk>
+# Based on work from Matteo Cerutti <matteo.cerutti@hotmail.co.uk>
 #
 
 FROM ruby:2.4-slim
-MAINTAINER Matteo Cerutti <matteo.cerutti@hotmail.co.uk>
+MAINTAINER Andrew Beresford <andrew@aviancarrier.co.uk>
 
 ENV PUPPET_FORGE_SERVER_BASEDIR /srv/puppet-forge-server
-ENV PUPPET_FORGE_SERVER_VERSION 1.10.0
+ENV PUPPET_FORGE_SERVER_VERSION 1.10.1
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends gcc make ruby-dev rubygems && \
